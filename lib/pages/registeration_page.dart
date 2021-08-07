@@ -1,3 +1,4 @@
+import 'package:delivery_app/utils/palettes.dart';
 import 'package:flutter/material.dart';
 
 class RegistrationPage extends StatefulWidget {
@@ -131,7 +132,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
       style: TextStyle(
         fontSize: 12,
         letterSpacing: 1.2,
-        color: Colors.grey,
+        color: stormCloud,
         fontWeight: FontWeight.bold,
       ),
     ));
@@ -139,7 +140,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
 
   Widget _buildNameField(String lable) {
     return Container(
-      color: Colors.grey[100],
+      color: stormCloud,
       child: TextFormField(
         // onChanged: (value) => _phone
         // = value.trim(),
@@ -148,10 +149,9 @@ class _RegistrationPageState extends State<RegistrationPage> {
 
         decoration: InputDecoration(
           labelText: lable,
-          labelStyle: TextStyle(color: Colors.grey),
+          labelStyle: TextStyle(color: stormCloud),
           floatingLabelBehavior: FloatingLabelBehavior.never,
           border: InputBorder.none,
-          fillColor: Colors.amber,
         ),
         cursorColor: Colors.black12,
       ),
@@ -160,7 +160,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
 
   Widget _buildPhoneNumberField() {
     return Container(
-      color: Colors.grey[100],
+      color: stormCloud,
       child: TextFormField(
         onChanged: (value) => {
           if (value.length == 10)
@@ -173,12 +173,12 @@ class _RegistrationPageState extends State<RegistrationPage> {
         keyboardType: TextInputType.phone,
         decoration: InputDecoration(
           labelText: 'Phone number',
-          labelStyle: TextStyle(color: Colors.grey),
+          labelStyle: TextStyle(color: stormCloud),
           floatingLabelBehavior: FloatingLabelBehavior.never,
           suffixIcon: _phoneValidated
               ? Icon(
                   Icons.task_alt,
-                  color: Colors.green,
+                  color: green,
                 )
               : null,
           border: InputBorder.none,
@@ -192,18 +192,18 @@ class _RegistrationPageState extends State<RegistrationPage> {
 
   Widget _buildEmailField(String lable) {
     return Container(
-      color: Colors.grey[100],
+      color: stormCloud,
       child: TextFormField(
         // onChanged: (value) => _phone = value.trim(),
         keyboardType: TextInputType.phone,
         decoration: InputDecoration(
           labelText: lable,
-          labelStyle: TextStyle(color: Colors.grey),
+          labelStyle: TextStyle(color: stormCloud),
           floatingLabelBehavior: FloatingLabelBehavior.never,
           suffixIcon: _emailValidated
               ? Icon(
                   Icons.task_alt,
-                  color: Colors.green,
+                  color: green,
                 )
               : null,
           border: InputBorder.none,
@@ -236,8 +236,8 @@ class _RegistrationPageState extends State<RegistrationPage> {
       keyboardType: TextInputType.text,
       decoration: InputDecoration(
         labelText: 'Password',
-        focusColor: Color(0xff4064f3),
-        labelStyle: TextStyle(color: Colors.grey),
+        focusColor: blue,
+        labelStyle: TextStyle(color: stormCloud),
         floatingLabelBehavior: FloatingLabelBehavior.never,
         border: InputBorder.none,
         filled: true,
@@ -261,14 +261,14 @@ class _RegistrationPageState extends State<RegistrationPage> {
       children: [
         Icon(
           Icons.adjust,
-          color: param ? Colors.green : Colors.red,
+          color: param ? green : red,
         ),
         SizedBox(
           width: 10,
         ),
         Text(
           parameter,
-          style: TextStyle(color: Colors.grey),
+          style: TextStyle(color: stormCloud),
         )
       ],
     ));
@@ -292,10 +292,10 @@ class _RegistrationPageState extends State<RegistrationPage> {
                   blurRadius: 8,
                   spreadRadius: 2)
             ],
-            color: Colors.red[600]),
+            color: red),
         child: Text(
           'Account anlegen',
-          style: TextStyle(fontSize: 20, color: Colors.white),
+          style: TextStyle(fontSize: 20, color: white),
         ),
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:delivery_app/data/intro_screen_datas.dart';
 import 'package:delivery_app/pages/registeration_page.dart';
+import 'package:delivery_app/utils/palettes.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
@@ -27,12 +28,12 @@ class _SplashScreenState extends State<SplashScreen> {
             SizedBox(
               height: 40,
             ),
-            _submitButton(Colors.redAccent, "Anmelden", ""),
+            _submitButton(red, "Anmelden", ""),
             SizedBox(
               height: 20,
             ),
             _submitButton(
-                Colors.grey, "Registrieren", RegistrationPage.RouteName),
+                stormCloud, "Registrieren", RegistrationPage.RouteName),
             SizedBox(
               height: 20,
             ),
@@ -47,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return (Container(
       height: MediaQuery.of(context).size.height * 0.6,
       child: IntroductionScreen(
-        globalBackgroundColor: Colors.white,
+        globalBackgroundColor: white,
         pages: getPages(),
         onDone: () {
           // When done button is press
@@ -62,8 +63,8 @@ class _SplashScreenState extends State<SplashScreen> {
         dotsDecorator: DotsDecorator(
             size: const Size.square(10.0),
             activeSize: const Size(20.0, 10.0),
-            activeColor: Colors.black,
-            color: Colors.black26,
+            activeColor: black,
+            color: black,
             spacing: const EdgeInsets.symmetric(horizontal: 3.0),
             activeShape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(25.0))),
@@ -92,7 +93,7 @@ class _SplashScreenState extends State<SplashScreen> {
             color: color),
         child: Text(
           text,
-          style: TextStyle(fontSize: 20, color: Colors.white),
+          style: TextStyle(fontSize: 20, color: white),
         ),
       ),
     );
